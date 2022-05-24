@@ -26,12 +26,13 @@ images.get('/', function (req, res, next) {
                 }
                 else {
                     res.send('<h1>Something is wrong!</h1>');
+                    throw new Error("unexpected error occur on handling response!");
                 }
             }
         }
     }
     catch (error) {
-        console.log(error);
+        throw new Error("check your parameters and try using correct values!");
     }
 });
 exports.default = images;

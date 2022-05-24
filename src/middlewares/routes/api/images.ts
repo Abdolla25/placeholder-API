@@ -2,7 +2,7 @@ import express from 'express';
 import { resizeImage } from '../../processing/images';
 const images = express.Router();
 
-images.get('/', (req, res, next): void => {
+images.get('/', (req: express.Request, res: express.Response, next: express.NextFunction): void => {
     try {
         if (!req.query.filename || !req.query.width || !req.query.height) {
             res.send(`
@@ -12,7 +12,7 @@ images.get('/', (req, res, next): void => {
             const imgName = req.query.filename;
             const imgWidth = req.query.width as unknown as number;
             const imgHeight = req.query.height as unknown as number;
-            if (imgWidth < 1 || imgHeight < 1) {
+            if (imgWidth < 1 || imgHeight < 1 || isNaN(imgWidth) || isNaN(imgHeight)) {
                 res.send(`
                 <h1>Something is wrong!<br>Check your parameters...</h1>
                 <p>details:<br>filename: ${imgName}<br>width: ${imgWidth}<br>height: ${imgHeight}</p>
@@ -35,11 +35,12 @@ images.get('/', (req, res, next): void => {
                     `);
                 } else {
                     res.send('<h1>Something is wrong!</h1>');
+                    throw new Error("unexpected error occur on handling response!");
                 }
             }
         }
     } catch (error) {
-        console.log(error);
+        throw new Error("check your parameters and try using correct values!");
     }
 });
 

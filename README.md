@@ -1,6 +1,14 @@
 # udacity-first-project
 Advanced Full-Stack Web Development Nanodegree - First Project (Image Processing API)
 
+# Notes (Updates on Project)
+
+Due to udacity feedback here is some changes:
+
+1. using `__dirname` for absolute paths to adapt with different systems.
+2. Provide paramet types and return type for each function.
+3. using error handlers to get use of errors and prevent server crash.
+
 # Project Structure:
 
 | Dir               | Description                  |

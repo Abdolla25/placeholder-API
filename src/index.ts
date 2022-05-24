@@ -10,7 +10,7 @@ app.listen(port, () => {
     isServerRun = true;
 });
 
-app.get('/', (_req, res) => {
+app.get('/', (_req: express.Request, res: express.Response) => {
     res.send(
         `<h1>Request State: ${res.statusCode}</h1>
         \n<a href='/api'>API LINK</a>`
