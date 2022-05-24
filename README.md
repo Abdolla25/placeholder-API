@@ -6,7 +6,12 @@ Advanced Full-Stack Web Development Nanodegree - First Project (Image Processing
 -- ./dist **build dir (js)**
 ---
 -- ./src **script dir (ts)**
--- ./src/assets
+
+-- ./src/assets **static files**
+
+-- ./src/middlewares **modules/middleware files**
+
+-- ./src/tests **tests files**
 ---
 -- ./.eslintrc
 ---
