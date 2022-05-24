@@ -4,7 +4,7 @@ Advanced Full-Stack Web Development Nanodegree - First Project (Image Processing
 # Project Structure:
 
 -- ./dist **build dir (js)**
----
+
 -- ./src **script dir (ts)**
 
 -- ./src/assets **static files**
@@ -12,12 +12,11 @@ Advanced Full-Stack Web Development Nanodegree - First Project (Image Processing
 -- ./src/middlewares **modules/middleware files**
 
 -- ./src/tests **tests files**
----
+
 -- ./.eslintrc
----
+
 -- ./.prettierrc
----
+
 -- ./.package.json
----
+
 -- ./.package-lock.json
----
